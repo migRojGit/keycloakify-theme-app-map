@@ -1,0 +1,141 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb));
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+.login-pf body {
+   background: rgba(0, 0, 0, 0.946);
+   height: 100%;
+}
+.card-pf{
+  position: relative !important;
+  z-index: 10 !important;
+  border-radius: 10px;
+  background-color: rgba(28, 27, 27, 0.842);
+  border: white 1px solid;
+  animation: pulsar-border 5s infinite;
+  /* -webkit-box-shadow: 0px 0px 108px -50px rgba(219, 0, 0, 0.73);
+  -moz-box-shadow: 0px 0px 108px -50px rgba(192, 3, 3, 0.73);
+  box-shadow: 0px 0px 108px -50px rgba(204, 4, 4, 0.73); */
+}
+.form-group input[type="password"], .form-group input[type="text"]{
+  background-color: rgb(118, 115, 115) !important;
+}
+.kcFormPasswordVisibilityButtonClass {
+  background-color: rgb(118, 115, 115) !important;
+}
+.fa-eye{
+  color: #a9a3a3 !important;
+}
+.form-group label {
+  color: rgb(250, 242, 242) !important;
+}
+#kc-page-title {
+  color: rgb(250, 248, 248) !important;
+}
+#kc-form-buttons input[type="submit"]{
+  background-color: rgb(104, 105, 108);
+  border-radius: 5px;
+  color: #e5e5e5;
+}
+#social-google{
+  background-color: rgb(62, 83, 159);
+  animation: infinite 3s pulsar;
+}
+#social-google span{
+  color: #e5e5e5 !important;
+}
+#kc-social-providers hr{
+  border-top: 1px solid rgba(6, 14, 240, 0.248);
+}
+
+#kc-header-wrapper:nth-child(1),.custom-header{
+  position: relative;
+  z-index: 10;
+  font-size: 2.3rem;
+  background-clip: text;
+  color: transparent;
+  background-image: linear-gradient(to bottom, #e5e5e5, #333);
+  text-align: center;
+  font-family: sans-serif;
+  font-weight: bold;
+  text-rendering: optimizeLegibility !important;
+  border-radius: 7rem;
+}
+.custom-header{
+  position: relative;
+  margin: 0rem 0rem -5rem 0rem ;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.application-info{
+  margin: 1rem 1rem 1rem 1rem !important;
+  border: 1px solid rgba(255, 255, 255, 0.96);
+  width: max-content;
+  padding: 1rem 1rem 1rem 1rem;
+}
+@media (min-width: 768px) {
+  h1 {
+    font-size: 4.5rem;
+  }
+}
+@keyframes pulsar {
+  0% {
+    background-color: rgb(62, 83, 159); 
+  }
+  50% {
+    background-color: rgb(26, 70, 231); 
+  }
+  100% {
+    background-color: rgb(62, 83, 159); 
+  }
+}
+@keyframes pulsar-border{
+  0%{
+    -webkit-box-shadow: 0px 0px 108px -50px rgba(219, 0, 0, 0.73);
+    -moz-box-shadow: 0px 0px 108px -50px rgba(192, 3, 3, 0.73);
+    box-shadow: 0px 0px 108px -50px rgba(204, 4, 4, 0.73);
+  }
+  50%{
+    -webkit-box-shadow: 0px 0px 108px -30px rgba(219, 0, 0, 0.73);
+    -moz-box-shadow: 0px 0px 108px -30px rgba(192, 3, 3, 0.73);
+    box-shadow: 0px 0px 108px -30px rgba(204, 4, 4, 0.73);
+  }
+  100%{
+    -webkit-box-shadow: 0px 0px 108px -50px rgba(219, 0, 0, 0.73);
+    -moz-box-shadow: 0px 0px 108px -50px rgba(192, 3, 3, 0.73);
+    box-shadow: 0px 0px 108px -50px rgba(204, 4, 4, 0.73);
+  }
+}
+#kc-header-wrapper div[data-kc-msg="loginTitleHtml"]{
+  display: none !important;
+}
+
