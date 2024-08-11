@@ -48,3 +48,13 @@ export default tseslint.config({
   },
 })
 ```
+## Proyecto base para temas keycloak
+
+- Construcción de .jar en /keycloakify-theme-dist
+
+```
+yarn build-keycloak-theme
+```
+- Uso de keycloakify v10
+- Librería de animaciones motion-frame (ver package.json)
+- Soporte para aceternity (no NextJs) limitado
