@@ -31,7 +31,7 @@ export const ThemeInfo = (kcContext: KcContext) => {
                         })
                     }
                     {
-                        !alphaStatus && <li>Acceso rgular</li>
+                        !alphaStatus && <li>Acceso regular</li>
                     }
                 </ul>
                 <h6>Version theme {kcContext.themeVersion}</h6>
